@@ -18,5 +18,5 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.8",
-    install_requires=["kafka-python>2.0.2", "msgpack>1.0.2"],
+    install_requires=["kafka-python>2.0.0", "msgpack>1.0.0"],
 )
