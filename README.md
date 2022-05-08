@@ -10,7 +10,7 @@ Package contains helpers to consume and produce with Kafka.
 
 **Usage**:
 
-Pulling data:
+Producing and consuming. `Consumer` returns iterator.
 
     from kafka_tools import Producer, Consumer
 
