@@ -23,3 +23,6 @@ Producing and consuming. `Consumer` returns iterator.
     consumer = Consumer("topicname", bootstrap_servers=bootstrap_servers, auto_offset_reset="earliest")
     event = next(consumer.receive())
     print(event)
+
+    for event in consumer.receive():
+        yield event
