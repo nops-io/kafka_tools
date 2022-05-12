@@ -78,6 +78,11 @@ def headers_to_dict(headers):
 def headers_from_dict(headers: dict[str, str]):
     response = []
     for key, value in headers.items():
+        if not isinstance(key, str):
+            raise ValueError("Header key should be a string")
+        if not isinstance(value, str):
+            raise ValueError("Header value should be a string")
+
         response.append((key, value.encode("utf-8")))
 
     return response
