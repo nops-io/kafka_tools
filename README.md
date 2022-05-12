@@ -20,7 +20,10 @@ Producing and consuming. `Consumer` returns iterator.
     producer.send("topicname", value={"any": "payload"}, headers={"and": "any_headers"})
     producer.flush()
 
-    consumer = Consumer("topicname", bootstrap_servers=bootstrap_servers, auto_offset_reset="earliest")
+    # For consuming single or multiple topics at once
+    consumer = Consumer(bootstrap_servers=bootstrap_servers, group_id="KAFKA_CONSUMER_GROUP_ID", auto_offset_reset="latest")
+    consumer.subscribe(["topicname"])
+
     event = next(consumer.receive())
     print(event)
 
