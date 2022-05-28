@@ -1,6 +1,7 @@
 import datetime
 import logging
 from typing import Iterator
+from typing import Dict
 
 import msgpack
 from kafka import KafkaConsumer
@@ -75,7 +76,7 @@ def headers_to_dict(headers):
     return response
 
 
-def headers_from_dict(headers: dict[str, str]):
+def headers_from_dict(headers: Dict[str, str]):
     response = []
     for key, value in headers.items():
         if not isinstance(key, str):

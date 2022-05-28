@@ -1,18 +1,18 @@
 
-# kafka_tools
-Package contains helpers to consume and produce with Kafka.
+# nops-kafka
+Package contains helpers to consume and produce using Kafka.
   
 
 
 **Installation**
 
-    pip install git+https://github.com/nops-io/kafka_tools.git@master
+    pip install nops-kafka
 
 **Usage**:
 
 Producing and consuming. `Consumer` returns iterator.
 
-    from kafka_tools import Producer, Consumer
+    from nops_kafka import Producer, Consumer
 
     bootstrap_servers = "kafka.kafka.svc.cluster.local:9092"
 
